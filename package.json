@@ -1,0 +1,23 @@
+{
+  "author": "Jake Luer <jake@alogicalparadox.com>",
+  "name": "seed-redis",
+  "description": "Store your seed sets in Redis",
+  "version": "0.0.1",
+  "repository": {
+    "url": ""
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "dependencies": {
+    "redis": "latest" 
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "latest"
+  }
+}
