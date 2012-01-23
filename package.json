@@ -2,7 +2,7 @@
   "author": "Jake Luer <jake@alogicalparadox.com>",
   "name": "seed-redis",
   "description": "Store your seed sets in Redis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/qualiancy/seed-redis.git"
@@ -15,7 +15,7 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "redis": "0.7.x" 
+    "redis": "0.7.x"
   },
   "devDependencies": {
     "mocha": "*",
