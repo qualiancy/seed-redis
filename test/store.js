@@ -5,7 +5,7 @@ var should = require('chai').should()
 describe('Seed RedisStore', function () {
 
   var Store = new RedisStore.Store();
-  
+
   it('should have a version', function () {
     RedisStore.version.should.match(/^\d+\.\d+\.\d+$/);
   });
@@ -178,7 +178,7 @@ describe('Seed RedisStore', function () {
       graph.each(function (model) {
         model.destroy(function (err) {
           should.not.exist(err);
-          count-- || done(); 
+          count-- || done();
         });
       });
     });
