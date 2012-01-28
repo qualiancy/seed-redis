@@ -82,7 +82,7 @@ test database options are not provided by default.
 
 ## Getting Help
 
-All issues related to this project should be posted in [seed-redis GitHub Issues](https://github.com/qualiancy/seed-redis/issues).
+All issues related to this project should be posted in [seed-mongodb GitHub Issues](https://github.com/qualiancy/seed-mongodb/issues).
 For all general seed related issues, please visit [seed's GitHub Issues](https://github.com/qualiancy/seed/issues).
 There is also a community forum is available at the [Seed Google Group](https://groups.google.com/group/seedjs-orm).
 
