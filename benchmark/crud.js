@@ -4,6 +4,7 @@ var Seed = require('seed')
 suite('CRUD Operations', function () {
   set('type', 'static');
   set('iterations', 50000);
+  set('silent', true);
 
   var UID = new Seed.Flake()
     , keystore = []
@@ -14,7 +15,7 @@ suite('CRUD Operations', function () {
   });
 
   after(function () {
-    store.client.close();
+    store.client.quit();
   });
 
   bench('create', function (next) {
