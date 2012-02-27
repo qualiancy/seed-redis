@@ -20,6 +20,7 @@
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "seed": "0.1.x"
+    "seed": "0.2.x",
+    "matcha": "0.1.x"
   }
 }
