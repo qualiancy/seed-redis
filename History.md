@@ -1,4 +1,17 @@
 
+0.2.0 / 2012-02-27 
+==================
+
+  * benchmarks are 0.2.0 compat
+  * tests are 0.2.0 compat
+  * store is 0.2.0 compatible
+  * updated dev deps
+  * proper red is quit
+  * added benchmarks
+  * link update [ci skip]
+  * read me updates
+  * added seed as dev dependancy
+
 0.1.1 / 2012-01-23 
 ==================
 
