@@ -10,7 +10,7 @@ function after(n, fn) {
 
 describe('Seed RedisStore', function () {
 
-  var Store = new RedisStore.Store();
+  var Store = new RedisStore();
 
   it('should have a version', function () {
     RedisStore.version.should.match(/^\d+\.\d+\.\d+$/);
@@ -56,7 +56,7 @@ describe('Seed RedisStore', function () {
   });
 
   describe('CRUD from Graph', function () {
-    var store = new RedisStore.Store()
+    var store = new RedisStore()
       , graph = new Seed.Graph({
           store: store
         });
@@ -190,8 +190,8 @@ describe('Seed RedisStore', function () {
   });
 
   describe('db support', function () {
-    var db1 = new RedisStore.Store({ db: 1 })
-      , db2 = new RedisStore.Store({ db: 2 });
+    var db1 = new RedisStore({ db: 1 })
+      , db2 = new RedisStore({ db: 2 });
 
     var p1 = new Seed.Model({ name: 'hello world' }, { store: db1 })
       , p2 = new Seed.Model({ name: 'hello universe' }, { store: db2 });
