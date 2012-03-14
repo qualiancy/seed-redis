@@ -1,4 +1,16 @@
 
+0.3.0 / 2012-03-14 
+==================
+
+  * removed 0.4.x branch node test from travis
+  * added coverage tests
+  * update benches for new export
+  * main export on RedisStore … not RedisStore.Store
+  * use red is standard `:` as delimiter, not `/`
+  * if failure, return rejections and don't continue
+  * tests for multiple dbs
+  * added db support
+
 0.2.0 / 2012-02-27 
 ==================
 
