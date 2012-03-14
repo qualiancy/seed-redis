@@ -2,6 +2,12 @@ var should = require('chai').should()
   , Seed = require('seed')
   , RedisStore = require('..');
 
+function after(n, fn) {
+  return function () {
+    --n || fn.apply(null, arguments);
+  }
+}
+
 describe('Seed RedisStore', function () {
 
   var Store = new RedisStore.Store();
@@ -183,5 +189,35 @@ describe('Seed RedisStore', function () {
 
   });
 
+  describe('db support', function () {
+    var db1 = new RedisStore.Store({ db: 1 })
+      , db2 = new RedisStore.Store({ db: 2 });
 
+    var p1 = new Seed.Model({ name: 'hello world' }, { store: db1 })
+      , p2 = new Seed.Model({ name: 'hello universe' }, { store: db2 });
+
+    before(function (done) {
+      var next = after(2, done);
+      p1.save(next);
+      p2.save(next);
+    });
+
+    it('should allow for an item saved in its db to fetched', function (done) {
+      var v1 = new Seed.Model({ _id: p1.id }, { store: db1 });
+      v1.fetch(function (err) {
+        should.not.exist(err);
+        v1.get('name').should.equal('hello world');
+        done();
+      });
+    });
+
+    it('should not allow for an item in a different db to be fetched', function (done) {
+      var v2 = new Seed.Model({ _id: p1.id }, { store: db2 });
+      v2.fetch(function (err) {
+        should.exist(err);
+        err.should.have.property('code', 'ENOTFOUND');
+        done();
+      });
+    });
+  });
 });
