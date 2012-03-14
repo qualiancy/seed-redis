@@ -1,5 +1,5 @@
 var Seed = require('seed')
-  , RedisStore = require('..').Store;
+  , RedisStore = require('..');
 
 suite('CRUD Operations', function () {
   set('type', 'static');
