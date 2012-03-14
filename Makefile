@@ -7,8 +7,15 @@ test:
 		--reporter $(REPORTER) \
 		$(TESTS)
 
+test-cov: lib-cov
+	@SEEDREDIS_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
+
+lib-cov:
+	@rm -rf lib-cov
+	@jscoverage lib lib-cov
+
 bench:
 	@NODE_ENV=benchmark ./node_modules/.bin/matcha \
 		$(BENCHMARKS)
 
-.PHONY: test benchmark
+.PHONY: test test-cov lib-cov benchmark
