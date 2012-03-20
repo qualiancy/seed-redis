@@ -1,4 +1,9 @@
 
+0.3.2 / 2012-03-20 
+==================
+
+  * added more event listening and event debugging
+
 0.3.1 / 2012-03-19 
 ==================
 
