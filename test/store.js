@@ -141,6 +141,14 @@ describe('Seed RedisStore', function () {
       });
     });
 
+    it('can handle fetch that returns no results', function (done) {
+      graph.fetch('person', { name: 'Marvin' }, function (err) {
+        should.not.exist(err);
+        graph.length.should.equal(0);
+        done();
+      });
+    });
+
     it('should allow a subset of existing objects to be selected', function (done) {
       graph.fetch('person', { 'name': { $eq: 'Arthur Dent' } }, function (err) {
         should.not.exist(err);
