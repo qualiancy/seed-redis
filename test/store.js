@@ -118,7 +118,7 @@ describe('Seed RedisStore', function () {
       graph.set('location', earth._id);
       graph.set('location', ship._id);
 
-      graph.pull(function (err) {
+      graph.pull({ force: true }, function (err) {
         should.not.exist(err);
         graph.length.should.equal(4);
 
