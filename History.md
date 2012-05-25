@@ -1,4 +1,11 @@
 
+0.4.0 / 2012-05-25 
+==================
+
+  * traversal tests
+  * seed 0.3.x compat bugfix
+  * removing min-seed-version and debug dep
+
 0.3.2 / 2012-03-20 
 ==================
 
