@@ -1,4 +1,10 @@
 
+0.4.1 / 2012-05-25 
+==================
+
+  * test for empty fetch
+  * handle empty fetch hang bug
+
 0.4.0 / 2012-05-25 
 ==================
 
