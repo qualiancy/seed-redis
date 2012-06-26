@@ -15,12 +15,13 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "redis": "0.7.x"
+      "dragonfly": "0.2.x"
+    , "redis": "0.7.x"
   },
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "seed": "0.3.x",
+    "seed": "0.4.x",
     "matcha": "0.1.x"
   }
 }
