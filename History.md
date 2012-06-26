@@ -1,4 +1,11 @@
 
+0.5.0 / 2012-06-26 
+==================
+
+  * Merge branch 'refactor/organization'
+  * replace errors with dragonfly
+  * refactor file structure
+
 0.4.1 / 2012-05-25 
 ==================
 
