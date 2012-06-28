@@ -13,7 +13,7 @@ describe('Seed RedisStore', function () {
   var Store = new RedisStore();
 
   it('should have a version', function () {
-    RedisStore.version.should.match(/^\d+\.\d+\.\d+$/);
+    RedisStore.should.have.property('version');
   });
 
   it('can be checked as instanceof Seed.Store', function () {
