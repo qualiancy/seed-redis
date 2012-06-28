@@ -1,4 +1,10 @@
 
+0.5.1 / 2012-06-28 
+==================
+
+  * add instanceof test
+  * fix hard to duplicate error with json parsing
+
 0.5.0 / 2012-06-26 
 ==================
 
