@@ -16,6 +16,10 @@ describe('Seed RedisStore', function () {
     RedisStore.version.should.match(/^\d+\.\d+\.\d+$/);
   });
 
+  it('can be checked as instanceof Seed.Store', function () {
+    Store.should.be.instanceof(Seed.Store);
+  });
+
   describe('Models', function () {
 
     var Person = Seed.Model.extend('traveller', {
