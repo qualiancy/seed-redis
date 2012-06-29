@@ -1,4 +1,9 @@
 
+0.5.2 / 2012-06-29 
+==================
+
+  * try/catch is causing issues. worked fine before it
+
 0.5.1-1 / 2012-06-28 
 ==================
 
