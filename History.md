@@ -1,4 +1,9 @@
 
+0.5.3 / 2012-06-29 
+==================
+
+  * prevent race conditions when trying to fetch a deleted object
+
 0.5.2 / 2012-06-29 
 ==================
 
